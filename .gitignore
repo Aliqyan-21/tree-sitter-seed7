@@ -35,6 +35,7 @@ dist/
 *.wasm
 *.obj
 *.o
+*.c
 
 # Node.js
 node_modules/
