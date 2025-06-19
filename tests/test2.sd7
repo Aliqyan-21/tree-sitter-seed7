@@ -1,0 +1,13 @@
+$ include "seed7_05.s7i";
+
+const proc: greet is func
+  local
+    var string: name is "World";
+  begin
+    writeln("Hello, " & name);
+  end func;
+
+const proc: main is func
+  begin
+    greet();
+  end func;

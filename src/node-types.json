@@ -1,0 +1,2256 @@
+[
+  {
+    "type": "block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "exprArithmetic",
+          "named": true
+        },
+        {
+          "type": "exprAssign",
+          "named": true
+        },
+        {
+          "type": "exprBinary",
+          "named": true
+        },
+        {
+          "type": "exprCall",
+          "named": true
+        },
+        {
+          "type": "exprCompare",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        },
+        {
+          "type": "kBegin",
+          "named": true
+        },
+        {
+          "type": "kEndFunc",
+          "named": true
+        },
+        {
+          "type": "stmtCase",
+          "named": true
+        },
+        {
+          "type": "stmtFor",
+          "named": true
+        },
+        {
+          "type": "stmtIf",
+          "named": true
+        },
+        {
+          "type": "stmtRepeat",
+          "named": true
+        },
+        {
+          "type": "stmtWhile",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "caseBranch",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": ";",
+            "named": false
+          },
+          {
+            "type": "exprArithmetic",
+            "named": true
+          },
+          {
+            "type": "exprAssign",
+            "named": true
+          },
+          {
+            "type": "exprBinary",
+            "named": true
+          },
+          {
+            "type": "exprCall",
+            "named": true
+          },
+          {
+            "type": "exprCompare",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "integer",
+            "named": true
+          },
+          {
+            "type": "stmtCase",
+            "named": true
+          },
+          {
+            "type": "stmtFor",
+            "named": true
+          },
+          {
+            "type": "stmtIf",
+            "named": true
+          },
+          {
+            "type": "stmtRepeat",
+            "named": true
+          },
+          {
+            "type": "stmtWhile",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      },
+      "set": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "set_expression",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "kWhen",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "caseOtherwise",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ";",
+            "named": false
+          },
+          {
+            "type": "exprArithmetic",
+            "named": true
+          },
+          {
+            "type": "exprAssign",
+            "named": true
+          },
+          {
+            "type": "exprBinary",
+            "named": true
+          },
+          {
+            "type": "exprCall",
+            "named": true
+          },
+          {
+            "type": "exprCompare",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "integer",
+            "named": true
+          },
+          {
+            "type": "stmtCase",
+            "named": true
+          },
+          {
+            "type": "stmtFor",
+            "named": true
+          },
+          {
+            "type": "stmtIf",
+            "named": true
+          },
+          {
+            "type": "stmtRepeat",
+            "named": true
+          },
+          {
+            "type": "stmtWhile",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "kOtherwise",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "comment",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "comment",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "declConst",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "type",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "declFunc",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kConst",
+          "named": true
+        },
+        {
+          "type": "kIs",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "declFunc",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "block",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "declVar",
+          "named": true
+        },
+        {
+          "type": "kFunc",
+          "named": true
+        },
+        {
+          "type": "kLocal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "declUses",
+    "named": true,
+    "fields": {
+      "file": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kDollar",
+          "named": true
+        },
+        {
+          "type": "kInclude",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "declVar",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "type",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "exprArithmetic",
+            "named": true
+          },
+          {
+            "type": "exprAssign",
+            "named": true
+          },
+          {
+            "type": "exprBinary",
+            "named": true
+          },
+          {
+            "type": "exprCall",
+            "named": true
+          },
+          {
+            "type": "exprCompare",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "integer",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kIs",
+          "named": true
+        },
+        {
+          "type": "kVar",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "exprArithmetic",
+    "named": true,
+    "fields": {
+      "lhs": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "exprArithmetic",
+            "named": true
+          },
+          {
+            "type": "exprAssign",
+            "named": true
+          },
+          {
+            "type": "exprBinary",
+            "named": true
+          },
+          {
+            "type": "exprCall",
+            "named": true
+          },
+          {
+            "type": "exprCompare",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "integer",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      },
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "kDiv",
+            "named": true
+          },
+          {
+            "type": "kMinus",
+            "named": true
+          },
+          {
+            "type": "kMult",
+            "named": true
+          },
+          {
+            "type": "kPlus",
+            "named": true
+          }
+        ]
+      },
+      "rhs": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "exprArithmetic",
+            "named": true
+          },
+          {
+            "type": "exprAssign",
+            "named": true
+          },
+          {
+            "type": "exprBinary",
+            "named": true
+          },
+          {
+            "type": "exprCall",
+            "named": true
+          },
+          {
+            "type": "exprCompare",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "integer",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "exprAssign",
+    "named": true,
+    "fields": {
+      "lhs": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "rhs": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "exprArithmetic",
+            "named": true
+          },
+          {
+            "type": "exprAssign",
+            "named": true
+          },
+          {
+            "type": "exprBinary",
+            "named": true
+          },
+          {
+            "type": "exprCall",
+            "named": true
+          },
+          {
+            "type": "exprCompare",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "integer",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "kAssign",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "exprBinary",
+    "named": true,
+    "fields": {
+      "lhs": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "exprArithmetic",
+            "named": true
+          },
+          {
+            "type": "exprAssign",
+            "named": true
+          },
+          {
+            "type": "exprBinary",
+            "named": true
+          },
+          {
+            "type": "exprCall",
+            "named": true
+          },
+          {
+            "type": "exprCompare",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "integer",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      },
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "kConcat",
+            "named": true
+          }
+        ]
+      },
+      "rhs": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "exprArithmetic",
+            "named": true
+          },
+          {
+            "type": "exprAssign",
+            "named": true
+          },
+          {
+            "type": "exprBinary",
+            "named": true
+          },
+          {
+            "type": "exprCall",
+            "named": true
+          },
+          {
+            "type": "exprCompare",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "integer",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "exprCall",
+    "named": true,
+    "fields": {
+      "args": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "exprArithmetic",
+            "named": true
+          },
+          {
+            "type": "exprAssign",
+            "named": true
+          },
+          {
+            "type": "exprBinary",
+            "named": true
+          },
+          {
+            "type": "exprCall",
+            "named": true
+          },
+          {
+            "type": "exprCompare",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "integer",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      },
+      "function": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "exprCompare",
+    "named": true,
+    "fields": {
+      "lhs": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "exprArithmetic",
+            "named": true
+          },
+          {
+            "type": "exprAssign",
+            "named": true
+          },
+          {
+            "type": "exprBinary",
+            "named": true
+          },
+          {
+            "type": "exprCall",
+            "named": true
+          },
+          {
+            "type": "exprCompare",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "integer",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      },
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "kEq",
+            "named": true
+          },
+          {
+            "type": "kGeq",
+            "named": true
+          },
+          {
+            "type": "kGt",
+            "named": true
+          },
+          {
+            "type": "kLeq",
+            "named": true
+          },
+          {
+            "type": "kLt",
+            "named": true
+          },
+          {
+            "type": "kNeq",
+            "named": true
+          }
+        ]
+      },
+      "rhs": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "exprArithmetic",
+            "named": true
+          },
+          {
+            "type": "exprAssign",
+            "named": true
+          },
+          {
+            "type": "exprBinary",
+            "named": true
+          },
+          {
+            "type": "exprCall",
+            "named": true
+          },
+          {
+            "type": "exprCompare",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "integer",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "kCase",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "kElse",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "kElsif",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "kEndCase",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "kEndIf",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "kIf",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "kOf",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "kOtherwise",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "kThen",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "kWhen",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "program",
+    "named": true,
+    "root": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "declConst",
+          "named": true
+        },
+        {
+          "type": "declUses",
+          "named": true
+        },
+        {
+          "type": "kEndDot",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "set_expression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "set_literal",
+          "named": true
+        },
+        {
+          "type": "set_union",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "set_literal",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "exprArithmetic",
+          "named": true
+        },
+        {
+          "type": "exprAssign",
+          "named": true
+        },
+        {
+          "type": "exprBinary",
+          "named": true
+        },
+        {
+          "type": "exprCall",
+          "named": true
+        },
+        {
+          "type": "exprCompare",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        },
+        {
+          "type": "kRangeOp",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "set_union",
+    "named": true,
+    "fields": {
+      "lhs": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "set_expression",
+            "named": true
+          }
+        ]
+      },
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "kSetUnion",
+            "named": true
+          }
+        ]
+      },
+      "rhs": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "set_expression",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "stmtCase",
+    "named": true,
+    "fields": {
+      "branch": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "caseBranch",
+            "named": true
+          }
+        ]
+      },
+      "expression": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "exprArithmetic",
+            "named": true
+          },
+          {
+            "type": "exprAssign",
+            "named": true
+          },
+          {
+            "type": "exprBinary",
+            "named": true
+          },
+          {
+            "type": "exprCall",
+            "named": true
+          },
+          {
+            "type": "exprCompare",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "integer",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      },
+      "otherwise": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "caseOtherwise",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kCase",
+          "named": true
+        },
+        {
+          "type": "kEndCase",
+          "named": true
+        },
+        {
+          "type": "kOf",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "stmtElse",
+    "named": true,
+    "fields": {
+      "else": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ";",
+            "named": false
+          },
+          {
+            "type": "exprArithmetic",
+            "named": true
+          },
+          {
+            "type": "exprAssign",
+            "named": true
+          },
+          {
+            "type": "exprBinary",
+            "named": true
+          },
+          {
+            "type": "exprCall",
+            "named": true
+          },
+          {
+            "type": "exprCompare",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "integer",
+            "named": true
+          },
+          {
+            "type": "stmtCase",
+            "named": true
+          },
+          {
+            "type": "stmtFor",
+            "named": true
+          },
+          {
+            "type": "stmtIf",
+            "named": true
+          },
+          {
+            "type": "stmtRepeat",
+            "named": true
+          },
+          {
+            "type": "stmtWhile",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "kElse",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "stmtElsif",
+    "named": true,
+    "fields": {
+      "condition": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "exprArithmetic",
+            "named": true
+          },
+          {
+            "type": "exprAssign",
+            "named": true
+          },
+          {
+            "type": "exprBinary",
+            "named": true
+          },
+          {
+            "type": "exprCall",
+            "named": true
+          },
+          {
+            "type": "exprCompare",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "integer",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      },
+      "then": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ";",
+            "named": false
+          },
+          {
+            "type": "exprArithmetic",
+            "named": true
+          },
+          {
+            "type": "exprAssign",
+            "named": true
+          },
+          {
+            "type": "exprBinary",
+            "named": true
+          },
+          {
+            "type": "exprCall",
+            "named": true
+          },
+          {
+            "type": "exprCompare",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "integer",
+            "named": true
+          },
+          {
+            "type": "stmtCase",
+            "named": true
+          },
+          {
+            "type": "stmtFor",
+            "named": true
+          },
+          {
+            "type": "stmtIf",
+            "named": true
+          },
+          {
+            "type": "stmtRepeat",
+            "named": true
+          },
+          {
+            "type": "stmtWhile",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kElsif",
+          "named": true
+        },
+        {
+          "type": "kThen",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "stmtFor",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ";",
+            "named": false
+          },
+          {
+            "type": "exprArithmetic",
+            "named": true
+          },
+          {
+            "type": "exprAssign",
+            "named": true
+          },
+          {
+            "type": "exprBinary",
+            "named": true
+          },
+          {
+            "type": "exprCall",
+            "named": true
+          },
+          {
+            "type": "exprCompare",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "integer",
+            "named": true
+          },
+          {
+            "type": "stmtCase",
+            "named": true
+          },
+          {
+            "type": "stmtFor",
+            "named": true
+          },
+          {
+            "type": "stmtIf",
+            "named": true
+          },
+          {
+            "type": "stmtRepeat",
+            "named": true
+          },
+          {
+            "type": "stmtWhile",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      },
+      "high": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "exprArithmetic",
+            "named": true
+          },
+          {
+            "type": "exprAssign",
+            "named": true
+          },
+          {
+            "type": "exprBinary",
+            "named": true
+          },
+          {
+            "type": "exprCall",
+            "named": true
+          },
+          {
+            "type": "exprCompare",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "integer",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      },
+      "low": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "exprArithmetic",
+            "named": true
+          },
+          {
+            "type": "exprAssign",
+            "named": true
+          },
+          {
+            "type": "exprBinary",
+            "named": true
+          },
+          {
+            "type": "exprCall",
+            "named": true
+          },
+          {
+            "type": "exprCompare",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "integer",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      },
+      "variable": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kDo",
+          "named": true
+        },
+        {
+          "type": "kEndFor",
+          "named": true
+        },
+        {
+          "type": "kFor",
+          "named": true
+        },
+        {
+          "type": "kRange",
+          "named": true
+        },
+        {
+          "type": "kTo",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "stmtIf",
+    "named": true,
+    "fields": {
+      "condition": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "exprArithmetic",
+            "named": true
+          },
+          {
+            "type": "exprAssign",
+            "named": true
+          },
+          {
+            "type": "exprBinary",
+            "named": true
+          },
+          {
+            "type": "exprCall",
+            "named": true
+          },
+          {
+            "type": "exprCompare",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "integer",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      },
+      "else": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "stmtElse",
+            "named": true
+          }
+        ]
+      },
+      "elsif": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "stmtElsif",
+            "named": true
+          }
+        ]
+      },
+      "then": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ";",
+            "named": false
+          },
+          {
+            "type": "exprArithmetic",
+            "named": true
+          },
+          {
+            "type": "exprAssign",
+            "named": true
+          },
+          {
+            "type": "exprBinary",
+            "named": true
+          },
+          {
+            "type": "exprCall",
+            "named": true
+          },
+          {
+            "type": "exprCompare",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "integer",
+            "named": true
+          },
+          {
+            "type": "stmtCase",
+            "named": true
+          },
+          {
+            "type": "stmtFor",
+            "named": true
+          },
+          {
+            "type": "stmtIf",
+            "named": true
+          },
+          {
+            "type": "stmtRepeat",
+            "named": true
+          },
+          {
+            "type": "stmtWhile",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kEndIf",
+          "named": true
+        },
+        {
+          "type": "kIf",
+          "named": true
+        },
+        {
+          "type": "kThen",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "stmtRepeat",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ";",
+            "named": false
+          },
+          {
+            "type": "exprArithmetic",
+            "named": true
+          },
+          {
+            "type": "exprAssign",
+            "named": true
+          },
+          {
+            "type": "exprBinary",
+            "named": true
+          },
+          {
+            "type": "exprCall",
+            "named": true
+          },
+          {
+            "type": "exprCompare",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "integer",
+            "named": true
+          },
+          {
+            "type": "stmtCase",
+            "named": true
+          },
+          {
+            "type": "stmtFor",
+            "named": true
+          },
+          {
+            "type": "stmtIf",
+            "named": true
+          },
+          {
+            "type": "stmtRepeat",
+            "named": true
+          },
+          {
+            "type": "stmtWhile",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      },
+      "condition": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "exprArithmetic",
+            "named": true
+          },
+          {
+            "type": "exprAssign",
+            "named": true
+          },
+          {
+            "type": "exprBinary",
+            "named": true
+          },
+          {
+            "type": "exprCall",
+            "named": true
+          },
+          {
+            "type": "exprCompare",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "integer",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kRepeat",
+          "named": true
+        },
+        {
+          "type": "kUntil",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "stmtWhile",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ";",
+            "named": false
+          },
+          {
+            "type": "exprArithmetic",
+            "named": true
+          },
+          {
+            "type": "exprAssign",
+            "named": true
+          },
+          {
+            "type": "exprBinary",
+            "named": true
+          },
+          {
+            "type": "exprCall",
+            "named": true
+          },
+          {
+            "type": "exprCompare",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "integer",
+            "named": true
+          },
+          {
+            "type": "stmtCase",
+            "named": true
+          },
+          {
+            "type": "stmtFor",
+            "named": true
+          },
+          {
+            "type": "stmtIf",
+            "named": true
+          },
+          {
+            "type": "stmtRepeat",
+            "named": true
+          },
+          {
+            "type": "stmtWhile",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      },
+      "condition": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "exprArithmetic",
+            "named": true
+          },
+          {
+            "type": "exprAssign",
+            "named": true
+          },
+          {
+            "type": "exprBinary",
+            "named": true
+          },
+          {
+            "type": "exprCall",
+            "named": true
+          },
+          {
+            "type": "exprCompare",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "integer",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "kDo",
+          "named": true
+        },
+        {
+          "type": "kEndWhile",
+          "named": true
+        },
+        {
+          "type": "kWhile",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "string",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string_double",
+          "named": true
+        },
+        {
+          "type": "string_single",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "string_double",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "string_single",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "typeInteger",
+          "named": true
+        },
+        {
+          "type": "typeProc",
+          "named": true
+        },
+        {
+          "type": "typeString",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "\"",
+    "named": false
+  },
+  {
+    "type": "#",
+    "named": false
+  },
+  {
+    "type": "'",
+    "named": false
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": "(*",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": "*)",
+    "named": false
+  },
+  {
+    "type": "*}",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": ";",
+    "named": false
+  },
+  {
+    "type": "CASE",
+    "named": false
+  },
+  {
+    "type": "Case",
+    "named": false
+  },
+  {
+    "type": "ELSE",
+    "named": false
+  },
+  {
+    "type": "ELSIF",
+    "named": false
+  },
+  {
+    "type": "Else",
+    "named": false
+  },
+  {
+    "type": "Elsif",
+    "named": false
+  },
+  {
+    "type": "IF",
+    "named": false
+  },
+  {
+    "type": "If",
+    "named": false
+  },
+  {
+    "type": "OF",
+    "named": false
+  },
+  {
+    "type": "OTHERWISE",
+    "named": false
+  },
+  {
+    "type": "Of",
+    "named": false
+  },
+  {
+    "type": "Otherwise",
+    "named": false
+  },
+  {
+    "type": "THEN",
+    "named": false
+  },
+  {
+    "type": "Then",
+    "named": false
+  },
+  {
+    "type": "WHEN",
+    "named": false
+  },
+  {
+    "type": "When",
+    "named": false
+  },
+  {
+    "type": "case",
+    "named": false
+  },
+  {
+    "type": "else",
+    "named": false
+  },
+  {
+    "type": "elsif",
+    "named": false
+  },
+  {
+    "type": "identifier",
+    "named": true
+  },
+  {
+    "type": "if",
+    "named": false
+  },
+  {
+    "type": "integer",
+    "named": true
+  },
+  {
+    "type": "kAssign",
+    "named": true
+  },
+  {
+    "type": "kBegin",
+    "named": true
+  },
+  {
+    "type": "kConcat",
+    "named": true
+  },
+  {
+    "type": "kConst",
+    "named": true
+  },
+  {
+    "type": "kDiv",
+    "named": true
+  },
+  {
+    "type": "kDo",
+    "named": true
+  },
+  {
+    "type": "kDollar",
+    "named": true
+  },
+  {
+    "type": "kEndDot",
+    "named": true
+  },
+  {
+    "type": "kEndFor",
+    "named": true
+  },
+  {
+    "type": "kEndFunc",
+    "named": true
+  },
+  {
+    "type": "kEndWhile",
+    "named": true
+  },
+  {
+    "type": "kEq",
+    "named": true
+  },
+  {
+    "type": "kFor",
+    "named": true
+  },
+  {
+    "type": "kFunc",
+    "named": true
+  },
+  {
+    "type": "kGeq",
+    "named": true
+  },
+  {
+    "type": "kGt",
+    "named": true
+  },
+  {
+    "type": "kInclude",
+    "named": true
+  },
+  {
+    "type": "kIs",
+    "named": true
+  },
+  {
+    "type": "kLeq",
+    "named": true
+  },
+  {
+    "type": "kLocal",
+    "named": true
+  },
+  {
+    "type": "kLt",
+    "named": true
+  },
+  {
+    "type": "kMinus",
+    "named": true
+  },
+  {
+    "type": "kMult",
+    "named": true
+  },
+  {
+    "type": "kNeq",
+    "named": true
+  },
+  {
+    "type": "kPlus",
+    "named": true
+  },
+  {
+    "type": "kRange",
+    "named": true
+  },
+  {
+    "type": "kRangeOp",
+    "named": true
+  },
+  {
+    "type": "kRepeat",
+    "named": true
+  },
+  {
+    "type": "kSetUnion",
+    "named": true
+  },
+  {
+    "type": "kTo",
+    "named": true
+  },
+  {
+    "type": "kUntil",
+    "named": true
+  },
+  {
+    "type": "kVar",
+    "named": true
+  },
+  {
+    "type": "kWhile",
+    "named": true
+  },
+  {
+    "type": "of",
+    "named": false
+  },
+  {
+    "type": "otherwise",
+    "named": false
+  },
+  {
+    "type": "then",
+    "named": false
+  },
+  {
+    "type": "typeInteger",
+    "named": true
+  },
+  {
+    "type": "typeProc",
+    "named": true
+  },
+  {
+    "type": "typeString",
+    "named": true
+  },
+  {
+    "type": "when",
+    "named": false
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "{*",
+    "named": false
+  },
+  {
+    "type": "}",
+    "named": false
+  }
+]

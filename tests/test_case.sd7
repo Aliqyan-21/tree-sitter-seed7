@@ -1,0 +1,17 @@
+$ include "seed7_05.s7i";
+const proc: main is func
+  local
+    var integer: currChar is 'B';
+    var integer: characterClass is 0;
+  begin
+    case currChar of
+      when {'A' .. 'Z'} | {'a' .. 'z'}:
+        characterClass := LETTER;
+      when {'0' .. '9'}:
+        characterClass := DIGIT;
+      when {'"'}:  # Double quote
+        characterClass := QUOTE;
+      otherwise:
+        characterClass := ILLEGAL;
+    end case;
+  end func;

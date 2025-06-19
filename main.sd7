@@ -1,0 +1,83 @@
+$ include "seed7_05.s7i";
+
+(* write usage to cmd *)
+const proc: usage is func
+  begin
+    if length(argv(PROGRAM)) < 1 then
+      writeln("Usage: " <&  name(PROGRAM) <& " <mode[easy, medium, hard]>");
+      exit(1);
+    end if;
+  end func;
+
+(* game loop *)
+const proc: game(in integer: min, in integer: max) is func
+local
+var integer: randNum is 0;
+var integer: userGuess is 0;
+var integer: count is 1;
+var string: choice is "";
+var string: mode is "";
+  begin
+    randNum := rand(min, max);
+    writeln("Guess the number I am thinking of between " <&  min <& " and " <& max <& "...");
+    write("Your Guess: ");
+    readln(userGuess);
+
+    while TRUE do
+      if userGuess > randNum then
+        incr(count);
+        writeln("I am thinking of a smaller number than that...");
+        writeln("Try again:");
+        write("Your Guess: ");
+        readln(userGuess)
+      elsif userGuess < randNum then
+        incr(count);
+        writeln("I am thinking of a greater number than that...");
+        writeln("Try again:");
+        write("Your Guess: ");
+        readln(userGuess)
+      else
+        writeln("Yes, you guessed it right " <& userGuess <& " is the number I was thinking of!");
+        writeln("Total number of tries you took: " <& count);
+        writeln("Play again? [y/n]: ");
+        readln(choice);
+        if lower(choice) = "y" then
+          writeln("Choose difficulty[easy, medium, hard]: ");
+          readln(mode);
+          case mode of
+          when {"easy"}:
+            game(0, 100);
+          when {"medium"}:
+            game(0, 200);
+          when {"hard"}:
+            game(0, 300);
+          otherwise:
+            writeln("Invalid mode");
+            exit(1);
+          end case;
+        else
+          exit(0);
+        end if
+      end if
+    end while
+  end func;
+
+(* main function *)
+const proc: main is func
+local
+var string: mode is "";
+  begin
+    usage();
+    mode := argv(PROGRAM)[1];
+    case mode of
+    when {"easy"}:
+      game(0, 100);
+    when {"medium"}:
+      game(0, 200);
+    when {"hard"}:
+      game(0, 300);
+    otherwise:
+      writeln("Invalid mode");
+      exit(1);
+    end case;
+  end func;

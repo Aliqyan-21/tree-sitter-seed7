@@ -1,0 +1,13 @@
+$ include "seed7_05.s7i";
+const proc: main is func
+  local
+    var integer: x is 5;
+  begin
+    if x > 3 then
+      writeln("x is greater than 3");
+    elsif x = 3 then
+      writeln("x is 3");
+    else
+      writeln("x is less than 3");
+    end if;
+  end func;

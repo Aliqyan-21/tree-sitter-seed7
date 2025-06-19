@@ -1,0 +1,9 @@
+$ include "seed7_05.s7i";
+const proc: main is func
+  local
+    var integer: count is 1;
+  begin
+    repeat
+      writeln(count);
+    until count > 3
+  end func;

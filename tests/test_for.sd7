@@ -1,0 +1,9 @@
+$ include "seed7_05.s7i";
+const proc: main is func
+  local
+    var integer: i is 0;
+  begin
+    for i range 1 to 5 do
+      writeln(i);
+    end for;
+  end func;

@@ -1,0 +1,131 @@
+{
+	"scopeName": "source.seed7",
+	"name": "Seed7",
+	"fileTypes": [
+		"sd7"
+	],
+	"patterns": [
+		{
+			"name": "meta.preprocessor.seed7",
+			"begin": "^\\s*(\\$\\s+)?include\\b",
+			"end": "$",
+			"patterns": [
+				{
+					"name": "keyword.control.preprocessor.seed7",
+					"match": "^(\\$\\s+)?include\\b"
+				},
+				{
+					"include": "#string"
+				}
+			]
+		},
+		{
+			"name": "comment.line.number-sign.seed7",
+			"match": "#.*$"
+		},
+		{
+			"name": "comment.block.seed7",
+			"begin": "\\(\\*",
+			"end": "\\*\\)"
+		},
+		{
+			"name": "meta.function.user.seed7",
+			"match": "(?<=:\\s*)[a-zA-Z_][a-zA-Z0-9_]*(?=\\s+is\\s+func)"
+		},
+		{
+			"name": "meta.function.user.seed7",
+			"match": "\\b[a-zA-Z_][a-zA-Z0-9_]*(?=\\s*\\()"
+		},
+		{
+			"name": "keyword.declaration.seed7",
+			"match": "\\b(const|var)\\b"
+		},
+		{
+			"name": "meta.var-type.singleword.seed7",
+			"match": "(?<=\\b(?:var|in|in var|inout|val|ref|func)\\s+(?:array\\s+)?)([a-zA-Z_][a-zA-Z0-9_]*)(?=\\s*:)"
+		},
+		{
+			"name": "meta.const-type.singleword.seed7",
+			"match": "(?<=\\bconst\\s+)(?!(?:proc|func)\\b)([a-zA-Z_][a-zA-Z0-9_]*)(?=\\s*:)"
+		},
+		{
+			"name": "keyword.block.delimiter.seed7",
+			"match": "\\b(result|local|begin|end|return)\\b"
+		},
+		{
+			"name": "keyword.control.seed7",
+			"match": "\\b(proc|func|while|do|case|of|when|otherwise|repeat|until|for|range|step|key|if|elsif|else|then)\\b"
+		},
+		{
+			"name": "storage.type.seed7",
+			"match": "\\b(array|hash|set|string|integer|float|char|boolean)\\b"
+		},
+		{
+			"name": "punctuation.definition.array.seed7",
+			"match": "[\\[\\]]"
+		},
+		{
+			"name": "punctuation.definition.braces.seed7",
+			"match": "[{}]"
+		},
+		{
+			"name": "punctuation.terminator.statement.seed7",
+			"match": ";"
+		},
+		{
+			"name": "constant.character.true-false-null.seed7",
+			"match": "\\b(TRUE|FALSE|STD_NULL)\\b"
+		},
+		{
+			"name": "string.quoted.double.seed7",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.seed7",
+					"match": "\\\\."
+				}
+			]
+		},
+		{
+			"name": "string.quoted.single.seed7",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.seed7",
+					"match": "\\\\."
+				}
+			]
+		},
+		{
+			"name": "keyword.operator.seed7",
+			"match": "(\\bnot\\b|\\band\\b|\\bor\\b|=|<>|<|>|<=|>=|:=|\\+:=|\\-:=|\\*:=|/:=|<&|&|&:=|\\+|\\*|\\-|/|\\bdiv\\b|\\bis\\b|\\bto\\b|\\bdownto\\b|\\bnot\\b|\\bin\\b|\\binout\\b|\\bref\\b|\\.\\.)"
+		},
+		{
+			"name": "keyword.operator.ternary.seed7",
+			"match": "(\\?(?=[^:]+:))|((?<=\\?[^:]+):)"
+		},
+		{
+			"name": "variable.other.seed7",
+			"match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+		},
+		{
+			"name": "constant.numeric.decimal.seed7",
+			"match": "\\b\\d+(\\.\\d+)?\\b"
+		}
+	],
+	"repository": {
+		"string": {
+			"name": "string.quoted.double.seed7",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.seed7",
+					"match": "\\\\."
+				}
+			]
+		}
+	}
+}
